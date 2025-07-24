@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Convention de Stage - {{typeStageTitle}}</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #000;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #d32f2f;
+            padding-bottom: 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-transform: uppercase;
+            color: #d32f2f;
+        }
+        
+        .content {
+            margin: 30px 0;
+            text-align: justify;
+        }
+        
+        .student-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-left: 5px solid #d32f2f;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .student-info h3 {
+            margin-top: 0;
+            color: #d32f2f;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .info-row {
+            margin: 10px 0;
+        }
+        
+        .label {
+            font-weight: bold;
+            display: inline-block;
+            width: 150px;
+            color: #333;
+        }
+        
+        .value {
+            color: #000;
+        }
+        
+        .section {
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+        
+        .section h3 {
+            color: #d32f2f;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            page-break-inside: avoid;
+        }
+        
+        .signature {
+            text-align: center;
+            width: 250px;
+            border-top: 2px solid #333;
+            padding-top: 15px;
+            font-weight: bold;
+        }
+        
+        .signature-space {
+            height: 80px;
+            margin: 20px 0;
+        }
+        
+        .university-info {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        @media print {
+            body { 
+                margin: 20px; 
+                -webkit-print-color-adjust: exact;
+            }
+            .student-info {
+                background: #f8f9fa !important;
+            }
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .year-badge {
+            background: #d32f2f;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">École Nationale Supérieure d'Arts et Métiers</div>
+        <div class="subtitle">ENSAM - RABAT</div>
+        <div class="university-info">
+            Avenue Armée Royale, Madinat Al Irfane, BP 713, Agdal-Rabat<br>
+            Tél: +212 5 37 68 71 50 | Fax: +212 5 37 77 88 53
+        </div>
+        <div class="title">Convention de {{typeStageTitle}}</div>
+        <div class="year-badge">Année Universitaire 2024-2025</div>
+    </div>
+
+    <div class="content">
+        <div class="student-info">
+            <h3>Informations de l'étudiant(e)</h3>
+            <div class="info-grid">
+                <div class="info-row">
+                    <span class="label">Nom complet:</span>
+                    <span class="value">{{studentNom}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Email:</span>
+                    <span class="value">{{studentEmail}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Téléphone:</span>
+                    <span class="value">{{studentTelephone}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Filière:</span>
+                    <span class="value">{{studentFiliere}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Année d'études:</span>
+                    <span class="value">{{studentAnnee}}ème année</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Code Apogée:</span>
+                    <span class="value">{{studentCodeApogee}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">CNE:</span>
+                    <span class="value">{{studentCne}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">CIN:</span>
+                    <span class="value">{{studentCin}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Date de naissance:</span>
+                    <span class="value">{{studentDateNaissance}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Objectifs du stage</h3>
+            {{stageObjectifs}}
+        </div>
+
+        <div class="section">
+            <h3>Durée et période</h3>
+            {{stageDuree}}
+        </div>
+
+        <div class="section">
+            <h3>Modalités d'encadrement</h3>
+            {{stageEncadrement}}
+        </div>
+
+        <div class="section">
+            <h3>Modalités d'évaluation</h3>
+            {{stageEvaluation}}
+        </div>
+
+        <div class="section">
+            <h3>Engagements</h3>
+            <p><strong>L'étudiant s'engage à :</strong></p>
+            <ul>
+                <li>Respecter le règlement intérieur de l'organisme d'accueil</li>
+                <li>Faire preuve d'assiduité et de ponctualité</li>
+                <li>Rédiger un rapport de stage conforme aux exigences</li>
+                <li>Présenter son travail lors de la soutenance</li>
+            </ul>
+            
+            <p><strong>L'organisme d'accueil s'engage à :</strong></p>
+            <ul>
+                <li>Accueillir l'étudiant dans de bonnes conditions</li>
+                <li>Désigner un tuteur professionnel</li>
+                <li>Faciliter l'accès aux informations nécessaires</li>
+                <li>Évaluer le travail de l'étudiant</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="signature">
+            <div>Signature de l'étudiant(e)</div>
+            <div class="signature-space"></div>
+            <div>Date: {{dateGeneration}}</div>
+        </div>
+        <div class="signature">
+            <div>Cachet et signature</div>
+            <div>de l'administration ENSAM</div>
+            <div class="signature-space"></div>
+            <div>Date: ________________</div>
+        </div>
+    </div>
+</body>
+</html>

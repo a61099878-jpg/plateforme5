@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Convention de Stage de Fin d'Études</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #000;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #7b1fa2;
+            padding-bottom: 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #7b1fa2;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-transform: uppercase;
+            color: #7b1fa2;
+        }
+        
+        .content {
+            margin: 30px 0;
+            text-align: justify;
+        }
+        
+        .student-info {
+            background: #f3e5f5;
+            padding: 25px;
+            border-left: 5px solid #7b1fa2;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .student-info h3 {
+            margin-top: 0;
+            color: #7b1fa2;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .info-row {
+            margin: 10px 0;
+        }
+        
+        .label {
+            font-weight: bold;
+            display: inline-block;
+            width: 150px;
+            color: #333;
+        }
+        
+        .value {
+            color: #000;
+        }
+        
+        .section {
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+        
+        .section h3 {
+            color: #7b1fa2;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            page-break-inside: avoid;
+        }
+        
+        .signature {
+            text-align: center;
+            width: 250px;
+            border-top: 2px solid #333;
+            padding-top: 15px;
+            font-weight: bold;
+        }
+        
+        .signature-space {
+            height: 80px;
+            margin: 20px 0;
+        }
+        
+        .university-info {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        @media print {
+            body { 
+                margin: 20px; 
+                -webkit-print-color-adjust: exact;
+            }
+            .student-info {
+                background: #f3e5f5 !important;
+            }
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .year-badge {
+            background: #7b1fa2;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .expert-highlight {
+            background: #faf2ff;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #7b1fa2;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .important-note {
+            background: #fff3e0;
+            border: 1px solid #ff9800;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">École Nationale Supérieure d'Arts et Métiers</div>
+        <div class="subtitle">ENSAM - RABAT</div>
+        <div class="university-info">
+            Avenue Armée Royale, Madinat Al Irfane, BP 713, Agdal-Rabat<br>
+            Tél: +212 5 37 68 71 50 | Fax: +212 5 37 77 88 53
+        </div>
+        <div class="title">Convention de Stage de Fin d'Études</div>
+        <div class="year-badge">3ème Année - Projet d'Ingénieur</div>
+    </div>
+
+    <div class="content">
+        <div class="expert-highlight">
+            <strong>Projet de fin d'études :</strong> Ce stage constitue l'aboutissement de la formation d'ingénieur. 
+            L'étudiant doit réaliser un projet d'envergure démontrant sa maîtrise des compétences d'ingénieur.
+        </div>
+
+        <div class="important-note">
+            <strong>⚠️ Important :</strong> Ce stage de fin d'études est obligatoire pour l'obtention du diplôme d'ingénieur ENSAM. 
+            Il doit faire l'objet d'une validation préalable du sujet par l'équipe pédagogique.
+        </div>
+
+        <div class="student-info">
+            <h3>Informations de l'étudiant(e)</h3>
+            <div class="info-grid">
+                <div class="info-row">
+                    <span class="label">Nom complet:</span>
+                    <span class="value">{{studentNom}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Email:</span>
+                    <span class="value">{{studentEmail}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Téléphone:</span>
+                    <span class="value">{{studentTelephone}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Filière:</span>
+                    <span class="value">{{studentFiliere}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Année d'études:</span>
+                    <span class="value">{{studentAnnee}}ème année</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Code Apogée:</span>
+                    <span class="value">{{studentCodeApogee}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">CNE:</span>
+                    <span class="value">{{studentCne}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">CIN:</span>
+                    <span class="value">{{studentCin}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Date de naissance:</span>
+                    <span class="value">{{studentDateNaissance}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Objectifs du projet de fin d'études</h3>
+            <p>Le stage de fin d'études en troisième année vise à :</p>
+            <ul>
+                <li><strong>Réaliser</strong> un projet d'ingénieur complet et innovant</li>
+                <li><strong>Mettre en application</strong> l'ensemble des connaissances acquises durant le cursus</li>
+                <li><strong>Développer</strong> l'expertise dans la spécialité choisie</li>
+                <li><strong>Démontrer</strong> les capacités d'analyse, de synthèse et de résolution de problèmes complexes</li>
+                <li><strong>Préparer</strong> l'insertion professionnelle immédiate</li>
+                <li><strong>Contribuer</strong> de manière significative aux activités de l'organisme d'accueil</li>
+                <li><strong>Acquérir</strong> une expérience de management de projet et de leadership</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Durée et calendrier</h3>
+            <p><strong>Durée du stage :</strong> 4 à 6 mois (16 à 24 semaines)</p>
+            <p><strong>Période :</strong> Dernière année d'études (février-juillet ou septembre-février)</p>
+            <p><strong>Régime :</strong> Temps plein exclusif (aucune autre activité académique)</p>
+            <p><strong>Possibilité :</strong> Prolongation exceptionnelle sur dérogation</p>
+            <p><strong>Délai de remise :</strong> Mémoire et soutenance dans les 4 semaines suivant la fin du stage</p>
+        </div>
+
+        <div class="section">
+            <h3>Modalités d'encadrement et de suivi</h3>
+            <p>L'étudiant bénéficie d'un encadrement expert :</p>
+            <ul>
+                <li><strong>Tuteur entreprise :</strong> Ingénieur senior ou expert technique, responsable du projet</li>
+                <li><strong>Directeur de mémoire ENSAM :</strong> Enseignant-chercheur spécialisé dans le domaine du projet</li>
+                <li><strong>Comité de suivi :</strong> Instances tripartites pour les projets d'envergure</li>
+            </ul>
+            <p><strong>Modalités de suivi intensif :</strong></p>
+            <ul>
+                <li>Validation préalable obligatoire du sujet de stage</li>
+                <li>Réunions de lancement tripartites (objectifs, planning, livrables)</li>
+                <li>Points d'étape mensuels avec comités de pilotage</li>
+                <li>Visites regulières du directeur de mémoire</li>
+                <li>Pré-soutenance obligatoire à mi-parcours</li>
+                <li>Accompagnement pour la rédaction du mémoire</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Livrables et évaluation</h3>
+            <p>L'évaluation du projet de fin d'études se base sur :</p>
+            <ul>
+                <li><strong>Mémoire de fin d'études (40%)</strong> : 50-80 pages, niveau recherche/expertise</li>
+                <li><strong>Évaluation entreprise (30%)</strong> : Grille d'évaluation projet et compétences</li>
+                <li><strong>Soutenance devant jury d'experts (30%)</strong> : Présentation de 30 minutes + questions</li>
+            </ul>
+            
+            <p><strong>Composition du jury de soutenance :</strong></p>
+            <ul>
+                <li>Directeur de mémoire ENSAM (président)</li>
+                <li>Tuteur entreprise ou représentant qualifié</li>
+                <li>Expert externe du domaine</li>
+                <li>Enseignant ENSAM de la spécialité</li>
+            </ul>
+            
+            <p><strong>Structure du mémoire d'ingénieur :</strong></p>
+            <ul>
+                <li>Contexte industriel et problématique d'ingénieur</li>
+                <li>État de l'art et analyse bibliographique</li>
+                <li>Méthodologie et approche scientifique</li>
+                <li>Développement technique et réalisations</li>
+                <li>Résultats, validation et perspectives</li>
+                <li>Bilan personnel et professionnel</li>
+            </ul>
+            
+            <p><strong>Documents à fournir :</strong></p>
+            <ul>
+                <li>Mémoire de fin d'études relié en 5 exemplaires</li>
+                <li>Version numérique PDF du mémoire</li>
+                <li>Attestation de stage avec évaluation détaillée</li>
+                <li>Support de présentation (diaporama professionnel)</li>
+                <li>Éventuels prototypes, logiciels ou réalisations techniques</li>
+                <li>Fiche de synthèse pour l'annuaire des diplômés</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Engagements réciproques</h3>
+            <p><strong>L'étudiant s'engage à :</strong></p>
+            <ul>
+                <li>Réaliser un projet d'envergure avec un niveau d'expertise d'ingénieur</li>
+                <li>Faire preuve d'autonomie, d'initiative et de leadership</li>
+                <li>Respecter scrupuleusement les échéances et la qualité des livrables</li>
+                <li>Contribuer significativement aux objectifs de l'organisme d'accueil</li>
+                <li>Rédiger un mémoire de niveau recherche/expertise</li>
+                <li>Présenter ses travaux avec professionnalisme devant un jury d'experts</li>
+                <li>Maintenir la confidentialité absolue sur tous les aspects du projet</li>
+                <li>Représenter dignement l'ENSAM dans l'organisme d'accueil</li>
+            </ul>
+            
+            <p><strong>L'organisme d'accueil s'engage à :</strong></p>
+            <ul>
+                <li>Confier un projet d'ingénieur d'envergure et d'intérêt stratégique</li>
+                <li>Fournir un environnement technique et scientifique de haut niveau</li>
+                <li>Désigner un tuteur expert, disponible et impliqué dans le projet</li>
+                <li>Faciliter l'accès aux ressources techniques, financières et informationnelles</li>
+                <li>Permettre la participation aux instances de décision et comités techniques</li>
+                <li>Autoriser la valorisation académique des travaux (publications, brevets)</li>
+                <li>Évaluer objectivement les compétences d'ingénieur développées</li>
+                <li>Envisager favorablement un recrutement en cas de satisfaction mutuelle</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3>Propriété intellectuelle et confidentialité</h3>
+            <p>Les modalités de propriété intellectuelle et de confidentialité devront faire l'objet 
+            d'un avenant spécifique à cette convention, particulièrement pour :</p>
+            <ul>
+                <li>Les inventions et innovations développées durant le stage</li>
+                <li>Les droits de publication et de communication des résultats</li>
+                <li>L'utilisation des travaux à des fins pédagogiques</li>
+                <li>La protection des savoir-faire et informations sensibles</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="signature">
+            <div>Signature de l'étudiant(e)</div>
+            <div class="signature-space"></div>
+            <div>Date: {{dateGeneration}}</div>
+        </div>
+        <div class="signature">
+            <div>Cachet et signature</div>
+            <div>de l'administration ENSAM</div>
+            <div class="signature-space"></div>
+            <div>Date: ________________</div>
+        </div>
+    </div>
+</body>
+</html>

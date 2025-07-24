@@ -1,0 +1,6 @@
+nom,email,telephone,filiere,annee,code_apogee,cne,cin,date_naissance
+Ahmed Benali,ahmed.benali@ensam.ac.ma,0612345678,Génie Mécanique,1,AP001,CNE123456,BK12345,1990-01-15
+Fatima Zahr,fatima.zahr@ensam.ac.ma,0612345679,Génie Électrique,2,AP002,CNE123457,BK12346,1991-03-22
+Mohamed Alami,mohamed.alami@ensam.ac.ma,0612345680,Génie Civil,3,AP003,CNE123458,BK12347,1989-07-10
+Sarah Ouali,sarah.ouali@ensam.ac.ma,0612345681,Génie Industriel,1,AP004,CNE123459,BK12348,1992-11-08
+Youssef Tazi,youssef.tazi@ensam.ac.ma,0612345682,Génie Informatique,2,AP005,CNE123460,BK12349,1990-12-03

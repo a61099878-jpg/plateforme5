@@ -1,0 +1,235 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Convention de Stage - Test Étudiant</title>
+        <style>
+            @page {
+                margin: 2cm;
+                size: A4;
+            }
+            @media print {
+                body { 
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                }
+                .no-print { display: none; }
+                .page-break { page-break-before: always; }
+            }
+            body { 
+                font-family: 'Arial', sans-serif; 
+                margin: 0;
+                padding: 0;
+                line-height: 1.6; 
+                color: #333;
+                font-size: 12px;
+            }
+            .header { 
+                text-align: center; 
+                margin-bottom: 40px; 
+                border-bottom: 3px solid #2c5aa0;
+                padding-bottom: 20px;
+            }
+            .logo { 
+                font-size: 28px; 
+                font-weight: bold; 
+                color: #2c5aa0; 
+                margin-bottom: 10px;
+            }
+            .title { 
+                font-size: 22px; 
+                margin: 15px 0;
+                color: #333;
+                font-weight: bold;
+            }
+            .section { 
+                margin: 25px 0; 
+                page-break-inside: avoid;
+            }
+            .section h3 {
+                background-color: #f8f9fa;
+                padding: 10px 15px;
+                margin: 0 0 15px 0;
+                border-left: 4px solid #2c5aa0;
+                font-size: 16px;
+                color: #2c5aa0;
+            }
+            .field { 
+                margin: 8px 0; 
+                display: flex;
+                align-items: center;
+            }
+            .field strong {
+                min-width: 150px;
+                color: #555;
+            }
+            .signature { 
+                margin-top: 60px; 
+                display: flex; 
+                justify-content: space-between;
+                page-break-inside: avoid;
+            }
+            .signature div {
+                text-align: center;
+                width: 30%;
+            }
+            .signature p {
+                margin: 5px 0;
+            }
+            .signature-line {
+                border-bottom: 1px solid #333;
+                width: 80%;
+                margin: 30px auto 10px auto;
+                height: 1px;
+            }
+            .info-box {
+                background-color: #e8f4fd;
+                border: 1px solid #2c5aa0;
+                border-radius: 8px;
+                padding: 15px;
+                margin: 20px 0;
+            }
+            .footer {
+                position: fixed;
+                bottom: 1cm;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 10px;
+                color: #666;
+                border-top: 1px solid #ddd;
+                padding-top: 10px;
+            }
+            /* Print Button Styles */
+            .print-header {
+                background: #f8f9fa;
+                padding: 15px;
+                margin-bottom: 20px;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                text-align: center;
+            }
+            .print-btn {
+                background: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                margin: 0 10px;
+            }
+            .print-btn:hover {
+                background: #0056b3;
+            }
+        </style>
+        <script>
+            function printPDF() {
+                window.print();
+            }
+            function downloadHTML() {
+                const element = document.documentElement;
+                const html = element.outerHTML;
+                const blob = new Blob([html], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'convention_fin_annee_Test_Étudiant.html';
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="print-header no-print">
+            <h2>🎓 Convention de Stage - ENSAM Rabat</h2>
+            <p><strong>Étudiant:</strong> Test Étudiant | <strong>Type:</strong> fin annee | <strong>Filière:</strong> Génie Informatique</p>
+            <button class="print-btn" onclick="printPDF()">🖨️ Imprimer / Sauver en PDF</button>
+            <button class="print-btn" onclick="downloadHTML()">💾 Télécharger HTML</button>
+            <p style="margin-top: 10px; font-size: 14px; color: #666;">💡 <strong>Instructions:</strong> Cliquez sur "Imprimer / Sauver en PDF" et choisissez "Enregistrer au format PDF" dans votre navigateur.</p>
+        </div>
+        <div class="header">
+            <div class="logo">ÉCOLE NATIONALE SUPÉRIEURE DES ARTS ET MÉTIERS</div>
+            <div class="logo">ENSAM - RABAT</div>
+            <div class="title">Convention de Stage de Fin d'Année</div>
+            <p style="margin: 0; color: #666;">Année universitaire 2025-2026</p>
+        </div>
+        
+        <div class="section">
+            <h3>Informations Étudiant</h3>
+            <div class="field"><strong>Nom complet :</strong> Test Étudiant</div>
+            <div class="field"><strong>Email :</strong> test.etudiant@ensam.ac.ma</div>
+            <div class="field"><strong>Filière :</strong> Génie Informatique</div>
+            <div class="field"><strong>Année d'études :</strong> 2ème année</div>
+            <div class="field"><strong>Code Apogée :</strong> TEST001</div>
+            <div class="field"><strong>CNE :</strong> CNE001</div>
+            <div class="field"><strong>CIN :</strong> CIN001</div>
+            <div class="field"><strong>Téléphone :</strong> 0612345678</div>
+        </div>
+        
+        <div class="section">
+            <h3>Détails du Stage</h3>
+            <div class="field"><strong>Type de stage :</strong> Stage de Fin d'Année</div>
+            <div class="field"><strong>Durée prévue :</strong> 8 semaines</div>
+            <div class="field"><strong>Date de génération :</strong> 22/07/2025</div>
+            <div class="field"><strong>Période :</strong> À définir avec l'organisme d'accueil</div>
+        </div>
+        
+        <div class="info-box">
+            <h4 style="margin-top: 0; color: #2c5aa0;">Objectifs du stage :</h4>
+            <p style="margin: 5px 0;">
+                Approfondissement des connaissances techniques et mise en pratique des enseignements théoriques dans un contexte professionnel.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h3>Organisme d'Accueil</h3>
+            <div class="field"><strong>Nom de l'entreprise :</strong> ___________________________________</div>
+            <div class="field"><strong>Secteur d'activité :</strong> ___________________________________</div>
+            <div class="field"><strong>Adresse complète :</strong> ___________________________________</div>
+            <div class="field"><strong>Responsable/Encadrant :</strong> ___________________________________</div>
+            <div class="field"><strong>Fonction :</strong> ___________________________________</div>
+            <div class="field"><strong>Téléphone :</strong> ___________________________________</div>
+            <div class="field"><strong>Email :</strong> ___________________________________</div>
+        </div>
+        
+        <div class="section">
+            <h3>Modalités</h3>
+            <div class="field"><strong>Date de début :</strong> _____ / _____ / _______</div>
+            <div class="field"><strong>Date de fin :</strong> _____ / _____ / _______</div>
+            <div class="field"><strong>Horaires :</strong> ___________________________________</div>
+            <div class="field"><strong>Gratification :</strong> ☐ Oui  ☐ Non  Montant : ________________</div>
+            <div class="field"><strong>Transport :</strong> ☐ Pris en charge  ☐ À la charge du stagiaire</div>
+            <div class="field"><strong>Restauration :</strong> ☐ Prise en charge  ☐ À la charge du stagiaire</div>
+        </div>
+        
+        <div class="signature">
+            <div>
+                <p><strong>Signature de l'Étudiant</strong></p>
+                <p style="font-size: 11px; color: #666;">Précédée de la mention</p>
+                <p style="font-size: 11px; color: #666;">"Lu et approuvé"</p>
+                <div class="signature-line"></div>
+                <p style="font-size: 10px;">Date et signature</p>
+            </div>
+            <div>
+                <p><strong>Cachet et Signature</strong></p>
+                <p><strong>ENSAM Rabat</strong></p>
+                <div class="signature-line"></div>
+                <p style="font-size: 10px;">Date et signature</p>
+            </div>
+            <div>
+                <p><strong>Cachet et Signature</strong></p>
+                <p><strong>Organisme d'Accueil</strong></p>
+                <div class="signature-line"></div>
+                <p style="font-size: 10px;">Date et signature</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>ENSAM Rabat - École Nationale Supérieure des Arts et Métiers - Avenue de l'Armée Royale, Rabat, Maroc</p>
+            <p>Tél. : +212 5 37 71 17 71 | Email : contact@ensam.ac.ma | Web : www.ensam.ac.ma</p>
+        </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,11 @@
+nom,email,telephone,filiere,annee,code_apogee,cne,cin,date_naissance
+Ahmed Ben Ali,ahmed.benali@ensam.ac.ma,0612345678,Génie Mécanique,1,AP001,N123456789,BH123456,1995-03-15
+Fatima El Amrani,fatima.elamrani@ensam.ac.ma,0687654321,Génie Électrique,2,AP002,N987654321,BH654321,1994-07-22
+Omar Tazi,omar.tazi@ensam.ac.ma,0698765432,Génie Civil,3,AP003,N456789123,BH789456,1993-11-08
+Salma Benkirane,salma.benkirane@ensam.ac.ma,0611223344,Génie Industriel,1,AP004,N321654987,BH987321,1995-01-30
+Youssef Alami,youssef.alami@ensam.ac.ma,0644556677,Génie Informatique,2,AP005,N159753486,BH486159,1994-05-18
+Zineb Cherkaoui,zineb.cherkaoui@ensam.ac.ma,0677889900,Génie Mécanique,3,AP006,N753951864,BH864753,1993-09-12
+Karim Bouazza,karim.bouazza@ensam.ac.ma,0622334455,Génie Électrique,1,AP007,N852741963,BH963852,1995-06-03
+Nadia Fassi,nadia.fassi@ensam.ac.ma,0655667788,Génie Civil,2,AP008,N147258369,BH369147,1994-12-25
+Mehdi Naciri,mehdi.naciri@ensam.ac.ma,0699112233,Génie Industriel,3,AP009,N963852741,BH741963,1993-04-17
+Aicha Benomar,aicha.benomar@ensam.ac.ma,0633445566,Génie Informatique,1,AP010,N741852963,BH258741,1995-08-11

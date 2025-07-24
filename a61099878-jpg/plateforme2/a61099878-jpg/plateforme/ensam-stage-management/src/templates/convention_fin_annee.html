@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Convention de Stage de Fin d'Année</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #000;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #1976d2;
+            padding-bottom: 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-transform: uppercase;
+            color: #1976d2;
+        }
+        
+        .content {
+            margin: 30px 0;
+            text-align: justify;
+        }
+        
+        .student-info {
+            background: #e3f2fd;
+            padding: 25px;
+            border-left: 5px solid #1976d2;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .student-info h3 {
+            margin-top: 0;
+            color: #1976d2;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .info-row {
+            margin: 10px 0;
+        }
+        
+        .label {
+            font-weight: bold;
+            display: inline-block;
+            width: 150px;
+            color: #333;
+        }
+        
+        .value {
+            color: #000;
+        }
+        
+        .section {
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+        
+        .section h3 {
+            color: #1976d2;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            page-break-inside: avoid;
+        }
+        
+        .signature {
+            text-align: center;
+            width: 250px;
+            border-top: 2px solid #333;
+            padding-top: 15px;
+            font-weight: bold;
+        }
+        
+        .signature-space {
+            height: 80px;
+            margin: 20px 0;
+        }
+        
+        .university-info {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        @media print {
+            body { 
+                margin: 20px; 
+                -webkit-print-color-adjust: exact;
+            }
+            .student-info {
+                background: #e3f2fd !important;
+            }
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .year-badge {
+            background: #1976d2;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .technical-highlight {
+            background: #f3f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #1976d2;
+            margin: 20px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">École Nationale Supérieure d'Arts et Métiers</div>
+        <div class="subtitle">ENSAM - RABAT</div>
+        <div class="university-info">
+            Avenue Armée Royale, Madinat Al Irfane, BP 713, Agdal-Rabat<br>
+            Tél: +212 5 37 68 71 50 | Fax: +212 5 37 77 88 53
+        </div>
+        <div class="title">Convention de Stage de Fin d'Année</div>
+        <div class="year-badge">2ème Année - Approfondissement Technique</div>
+    </div>
+
+    <div class="content">
+        <div class="technical-highlight">
+            <strong>Stage technique :</strong> Ce stage de fin d'année permet à l'étudiant d'approfondir ses connaissances 
+            techniques et de participer activement à des projets concrets en entreprise.
+        </div>
+
+        <div class="student-info">
+            <h3>Informations de l'étudiant(e)</h3>
+            <div class="info-grid">
+                <div class="info-row">
+                    <span class="label">Nom complet:</span>
+                    <span class="value">{{studentNom}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Email:</span>
+                    <span class="value">{{studentEmail}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Téléphone:</span>
+                    <span class="value">{{studentTelephone}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Filière:</span>
+                    <span class="value">{{studentFiliere}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Année d'études:</span>
+                    <span class="value">{{studentAnnee}}ème année</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Code Apogée:</span>
+                    <span class="value">{{studentCodeApogee}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">CNE:</span>
+                    <span class="value">{{studentCne}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">CIN:</span>
+                    <span class="value">{{studentCin}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Date de naissance:</span>
+                    <span class="value">{{studentDateNaissance}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Objectifs pédagogiques du stage technique</h3>
+            <p>Le stage de fin d'année en deuxième année vise à :</p>
+            <ul>
+                <li><strong>Approfondir</strong> les connaissances techniques dans la spécialité choisie</li>
+                <li><strong>Participer activement</strong> à des projets techniques concrets</li>
+                <li><strong>Développer</strong> l'autonomie professionnelle et la prise d'initiatives</li>
+                <li><strong>Maîtriser</strong> les outils et méthodologies de l'ingénieur</li>
+                <li><strong>Préparer</strong> l'insertion en stage de fin d'études</li>
+                <li><strong>Acquérir</strong> une expérience significative dans un domaine technique spécifique</li>
+                <li><strong>Développer</strong> les compétences de travail en équipe sur des projets réels</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Durée et calendrier</h3>
+            <p><strong>Durée du stage :</strong> 6 à 8 semaines minimum</p>
+            <p><strong>Période recommandée :</strong> Été de la deuxième année (juin-août)</p>
+            <p><strong>Horaires :</strong> Temps plein selon les horaires de l'organisme d'accueil</p>
+            <p><strong>Possibilité :</strong> Stage fractionné sur deux périodes avec accord préalable</p>
+            <p><strong>Délai de remise du rapport :</strong> 3 semaines après la fin du stage</p>
+        </div>
+
+        <div class="section">
+            <h3>Modalités d'encadrement et de suivi</h3>
+            <p>L'étudiant bénéficiera d'un encadrement renforcé :</p>
+            <ul>
+                <li><strong>Maître de stage :</strong> Ingénieur ou cadre technique qui supervise les activités quotidiennes</li>
+                <li><strong>Enseignant référent ENSAM :</strong> Suit l'évolution technique et pédagogique du stage</li>
+                <li><strong>Coordinateur de filière :</strong> Valide les objectifs techniques en cohérence avec le cursus</li>
+            </ul>
+            <p><strong>Modalités de suivi renforcées :</strong></p>
+            <ul>
+                <li>Visite obligatoire de l'enseignant référent en entreprise</li>
+                <li>Point d'étape à mi-parcours (rapport intermédiaire)</li>
+                <li>Réunions de suivi tripartites (étudiant-maître de stage-enseignant)</li>
+                <li>Carnet de stage détaillé avec objectifs techniques hebdomadaires</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Livrables et évaluation</h3>
+            <p>L'évaluation du stage technique se base sur :</p>
+            <ul>
+                <li><strong>Rapport de stage détaillé (50%)</strong> : 25-35 pages incluant une partie technique approfondie</li>
+                <li><strong>Évaluation du maître de stage (30%)</strong> : Grille détaillée fournie par l'ENSAM</li>
+                <li><strong>Soutenance devant jury (20%)</strong> : Présentation de 15 minutes + questions techniques</li>
+            </ul>
+            
+            <p><strong>Structure du rapport technique :</strong></p>
+            <ul>
+                <li>Présentation de l'organisme et du contexte technique</li>
+                <li>Description détaillée des projets et missions techniques</li>
+                <li>Analyse des méthodologies et outils utilisés</li>
+                <li>Bilan des compétences techniques acquises</li>
+                <li>Perspective pour le stage de fin d'études</li>
+            </ul>
+            
+            <p><strong>Documents à fournir :</strong></p>
+            <ul>
+                <li>Rapport de stage relié en 4 exemplaires</li>
+                <li>Attestation de stage avec évaluation détaillée</li>
+                <li>Carnet de stage complété et signé</li>
+                <li>Support de présentation (diaporama)</li>
+                <li>Éventuels livrables techniques (avec accord de l'entreprise)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Engagements réciproques</h3>
+            <p><strong>L'étudiant s'engage à :</strong></p>
+            <ul>
+                <li>Respecter scrupuleusement le règlement intérieur et les consignes de sécurité</li>
+                <li>Faire preuve d'initiative et d'autonomie dans les missions confiées</li>
+                <li>Contribuer activement aux projets techniques de l'organisme</li>
+                <li>Rédiger un rapport technique de qualité professionnelle</li>
+                <li>Présenter ses travaux de manière claire et structurée</li>
+                <li>Maintenir la confidentialité absolue sur les projets et données sensibles</li>
+                <li>Respecter les échéances et délais fixés</li>
+            </ul>
+            
+            <p><strong>L'organisme d'accueil s'engage à :</strong></p>
+            <ul>
+                <li>Fournir un environnement de travail technique adapté et sécurisé</li>
+                <li>Confier des missions techniques en adéquation avec le niveau d'études</li>
+                <li>Désigner un maître de stage qualifié et disponible</li>
+                <li>Faciliter l'accès aux outils, logiciels et documentation techniques</li>
+                <li>Permettre la participation à des réunions et projets techniques</li>
+                <li>Évaluer objectivement les compétences techniques développées</li>
+                <li>Autoriser la présentation des travaux dans le respect de la confidentialité</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="signature">
+            <div>Signature de l'étudiant(e)</div>
+            <div class="signature-space"></div>
+            <div>Date: {{dateGeneration}}</div>
+        </div>
+        <div class="signature">
+            <div>Cachet et signature</div>
+            <div>de l'administration ENSAM</div>
+            <div class="signature-space"></div>
+            <div>Date: ________________</div>
+        </div>
+    </div>
+</body>
+</html>

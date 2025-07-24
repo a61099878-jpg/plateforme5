@@ -1,0 +1,6 @@
+nom,email,telephone,filiere,annee,code_apogee,cne,cin,date_naissance
+Ahmed Benjelloun,ahmed.benjelloun@student.ensam.ac.ma,0612345678,Génie Mécanique,2,AP001,CNE123456,CD789123,1995-03-15
+Fatima Alami,fatima.alami@student.ensam.ac.ma,0698765432,Génie Électrique,1,AP002,CNE234567,CD890234,1996-07-22
+Youssef Idrissi,youssef.idrissi@student.ensam.ac.ma,0656789012,Génie Civil,3,AP003,CNE345678,CD901345,1994-11-08
+Zineb Mernissi,zineb.mernissi@student.ensam.ac.ma,0634567890,Génie Informatique,2,AP004,CNE456789,CD012456,1995-09-30
+Omar Tazi,omar.tazi@student.ensam.ac.ma,0687654321,Génie Industriel,1,AP005,CNE567890,CD123567,1997-01-12
